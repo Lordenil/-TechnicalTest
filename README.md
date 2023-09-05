@@ -1,5 +1,5 @@
 # -TechnicalTest
-# Token login to github repository "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"
+# Token login to github repository "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"
 
 # Create docker image MYSQL
 # https://blog.christian-schou.dk/creating-and-running-a-mysql-database-with-docker-compose/
