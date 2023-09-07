@@ -12,6 +12,9 @@ public class EmployeeModel {
     private int id;
 
     private String name;
+    private String identification;
     private String mail;
-    private int phone;
+    private String phone;
+
+
 }
