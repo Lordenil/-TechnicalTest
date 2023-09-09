@@ -38,6 +38,7 @@ public class EmployeeController {
     @DeleteMapping( path = "/{id}")
     public String deleteById(@PathVariable("id") Long id){
         boolean ok = this.employeeService.deleteEmployee(id);
+        
         if (ok){
             return "Se eliminó el usuario con id " + id;
         }else{
