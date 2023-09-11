@@ -14,11 +14,15 @@ public class EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    public ArrayList<EmployeeModel> findEmployees() {
+    public ArrayList<EmployeeModel> find() {
         return (ArrayList<EmployeeModel>) employeeRepository.findAll();
     }
 
-    public EmployeeModel saveEmployee(EmployeeModel employee) {
+    public EmployeeModel update(EmployeeModel employee) {
+        return employeeRepository.save(employee);
+    }
+
+    public EmployeeModel save(EmployeeModel employee) {
         return employeeRepository.save(employee);
     }
 
@@ -30,7 +34,7 @@ public class EmployeeService {
         return employeeRepository.findByName(name);
     }
 
-    public boolean deleteEmployee(Long id) {
+    public boolean delete(Long id) {
         try {
             employeeRepository.deleteById(id);
             return true;

@@ -22,6 +22,10 @@ public class CompanyService {
             return companyRepository.save(company);
     }
 
+    public CompanyModel update(CompanyModel company) {
+        return companyRepository.save(company);
+    }
+
     public Optional<CompanyModel> findById(Long id) {
         return companyRepository.findById(id);
     }

@@ -5,10 +5,11 @@ import java.util.Optional;
 
 import com.example.technicaltest.models.CompanyModel;
 import com.example.technicaltest.services.CompanyService;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins="http://localhost:5173")
 @RestController
 @RequestMapping("/company")
 public class CompanyController {
@@ -22,8 +23,12 @@ public class CompanyController {
 
     @PostMapping()
     public CompanyModel save(@RequestBody CompanyModel company){
-        System.out.println(company.toString());
         return this.companyService.save(company);
+    }
+
+    @PutMapping(path = "/{id}")
+    public CompanyModel update(@RequestBody CompanyModel company){
+        return this.companyService.update(company);
     }
 
     @GetMapping( path = "/{id}")

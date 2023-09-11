@@ -6,3 +6,7 @@
 # docker compose up MYSQL contanier 
 # docker-compose up -d
 # 
+#Vue JS CRUDVue JS CRUD
+#https://www.youtube.com/watch?v=T_nHhytGqk4&list=PLRheCL1cXHrvCyj_RucTn4Bki_4NvT9Sp&index=5
+#
+#
