@@ -7,6 +7,8 @@ import lombok.Setter;
 import com.example.technicaltest.models.CompanyModel;
 
 @Data
+@Getter
+@Setter
 @Entity
 @Table(name = "employee")
 public class EmployeeModel {
@@ -14,6 +16,7 @@ public class EmployeeModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private int id;
+
 
     private String name;
 
